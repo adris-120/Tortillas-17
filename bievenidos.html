@@ -1,0 +1,211 @@
+<!doctype html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bienvenidos a Tortillas Maru</title>
+  <style>
+    /* CSS Variables for color scheme and spacing */
+    :root {
+      --color-bg: #ffffff;
+      --color-text-primary: #111827;
+      --color-text-secondary: #6b7280;
+      --color-accent: #111827;
+      --color-accent-hover: #374151;
+      --shadow-light: rgba(0, 0, 0, 0.05);
+      --border-radius: 0.75rem;
+      --font-sans: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      --spacing-vertical: 4rem;
+      --transition-speed: 0.3s;
+    }
+
+  
+
+    /* Reset and base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: var(--color-bg);
+      color: var(--color-text-primary);
+      font-family: var(--font-sans);
+      font-size: 18px;
+      line-height: 1.6;
+      font-weight: 400;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      scroll-behavior: smooth;
+    }
+
+    /* Container centered with max width */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      width: 100%;
+    }
+
+    /* Sticky navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      background: var(--color-bg);
+      box-shadow: 0 2px 8px var(--shadow-light);
+      z-index: 100;
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 4.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--color-accent);
+      letter-spacing: 1px;
+      user-select: none;
+      cursor: default;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--color-text-secondary);
+      transition: color var(--transition-speed);
+    }
+    .nav-links a:hover,
+    .nav-links a:focus {
+      color: var(--color-accent);
+      outline: none;
+    }
+
+    /* Hero Section */
+    header.hero {
+      padding-top: var(--spacing-vertical);
+      padding-bottom: calc(var(--spacing-vertical) * 1.25);
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    header.hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      margin-bottom: 1rem;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+    }
+    header.hero p {
+      font-size: 1.25rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 2.5rem;
+    }
+    header.hero .cta-button {
+      background-color: var(--color-accent);
+      color: white;
+      font-weight: 700;
+      font-size: 1.125rem;
+      padding: 0.8rem 2.25rem;
+      border: none;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(17, 24, 39, 0.15);
+      transition:
+        background-color var(--transition-speed),
+        transform var(--transition-speed);
+      user-select: none;
+      text-decoration: none;
+      display: inline-block;
+    }
+    header.hero .cta-button:hover,
+    header.hero .cta-button:focus {
+      background-color: var(--color-accent-hover);
+      transform: scale(1.05);
+      outline: none;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: auto;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.875rem;
+      color: var(--color-text-secondary);
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      header.hero h1 {
+        font-size: 2.5rem;
+      }
+      header.hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav role="navigation" aria-label="Principal">
+    <div class="nav-inner container">
+      <div class="logo" aria-label="Logo de Tortillas del Sabor">TortillasMaru</div>
+     
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" role="banner">
+    <h1>Bienvenidos a Tortillas MARU</h1>
+    <p>La tradición más auténtica en cada tortilla que hacemos, directo para tu mesa.</p>
+    
+  </header>
+
+  <main class="container" role="main" aria-label="Contenido principal">
+    <section id="productos" style="margin-bottom: 4rem;">
+      <h2 style="font-weight:700; font-size:2rem; color:var(--color-accent); margin-bottom:1rem;">Nuestros productos destacados</h2>
+      <div style="display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 2rem;">
+        <article style="background: #f9fafb; border-radius: var(--border-radius); padding: 1.5rem; box-shadow: 0 4px 8px var(--shadow-light);">
+          <h3 style="margin-bottom: 0.5rem; font-weight: 600; color: var(--color-accent);">Tortilla blancas</h3>
+          <p style="color: var(--color-text-secondary);">El sabor clásico tradicional, hecha con el mejor maíz nixtamalizado.</p>
+        </article>
+        <article style="background: #f9fafb; border-radius: var(--border-radius); padding: 1.5rem; box-shadow: 0 4px 8px var(--shadow-light);">
+          <h3 style="margin-bottom: 0.5rem; font-weight: 600; color: var(--color-accent);">Tortilla Azules</h3>
+          <p style="color: var(--color-text-secondary);">Ideal para tacos y burritos, elaborada con harina selecta para una textura suave.</p>
+        </article>
+        <article style="background: #f9fafb; border-radius: var(--border-radius); padding: 1.5rem; box-shadow: 0 4px 8px var(--shadow-light);">
+          <h3 style="margin-bottom: 0.5rem; font-weight: 600; color: var(--color-accent);">Tortilla TRIGO</h3>
+          <p style="color: var(--color-text-secondary);">Una opción saludable con un sabor único y todos los nutrientes del grano entero.</p>
+        </article>
+      </div>
+    </section>
+
+    
+      </p>
+    </section>
+
+    <section id="contacto" style="text-align: center;">
+      <h2 style="font-weight:700; font-size:2rem; color:var(--color-accent); margin-bottom: 1rem;">Contáctanos</h2>
+      <p style="color: var(--color-text-secondary); margin-bottom: 1.25rem;">
+        ¿Tienes preguntas o quieres hacer un pedido? Escríbenos y estaremos encantados de atenderte.
+    </section>
+  </main>
+
+  <footer>
+ 
+  </footer>
+</body>
+</html>
+
+
+

@@ -1,0 +1,275 @@
+<!doctype html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Venta de Tortillas - Tortillas del Sabor</title>
+  <style>
+   
+      body {
+      margin: 0;
+     
+      background: #fff8f0;
+      color: #5a3e1b;
+      line-height: 1.6;
+    }
+    header {
+      background: #0A0909;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-style: italic;
+    }
+    nav {
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: white;
+      margin: 0 0.75rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffe4b5;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1617191519164-8890c3211f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #f7f1e3;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+      padding: 0 1rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+    .btn-primary {
+      color: #d97706;
+      background: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      box-shadow: 0 3px 8px rgba(217, 119, 6, 0.5);
+      text-transform: uppercase;
+    }
+    .btn-primary:hover {
+      background: #f7f1e3;
+      color: #b55d03;
+    }
+    main {
+      max-width: 960px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h3 {
+      color: #b55d03;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid #d97706;
+      padding-bottom: 0.25rem;
+      max-width: max-content;
+    }
+    .product-info {
+      font-size: 1.1rem;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .feature {
+      background: #fff3db;
+      flex: 1 1 280px;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 6px rgba(186, 145, 54, 0.3);
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+    .feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(186, 145, 54, 0.45);
+    }
+    .feature h4 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      color: #a04e00;
+      font-size: 1.3rem;
+    }
+    .feature p {
+      margin: 0;
+    }
+    form {
+      background: #fff3db;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(186, 145, 54, 0.3);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #7f4e00;
+    }
+    form input,
+    form textarea,
+    form select {
+      width: 100%;
+      padding: 0.6rem 0.8rem;
+      margin-bottom: 1.25rem;
+      border: 2px solid #d97706;
+      border-radius: 8px;
+      font-size: 1rem;
+      
+      resize: vertical;
+      transition: border-color 0.3s ease;
+    }
+    form input:focus,
+    form textarea:focus,
+    form select:focus {
+      border-color: #b55d03;
+      outline: none;
+    }
+    form textarea {
+      min-height: 100px;
+    }
+    form button {
+      background: #d97706;
+      color: white;
+      border: none;
+      padding: 0.85rem 2rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 40px;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(217, 119, 6, 0.7);
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background: #b55d03;
+    }
+    footer {
+      background: #d97706;
+      color: white;
+      text-align: center;
+      padding: 1rem 2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.15);
+    }
+    @media (max-width: 600px) {
+      .features {
+        flex-direction: column;
+      }
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+    <h1>Tortillas Maru</h1>
+    <nav aria-label="Menú principal">
+      <a href="nosotros.html">Nosotros</a>
+      <a href="producto.html">Productos</a>
+      <a href="precios.html">Precios</a>
+	  <a href="bievenidos.html"> Bienvenidos</a>
+		
+      
+   
+  </header>
+  <main>
+     </p>
+    </section>
+    
+        </article>
+      </div>
+    
+      <img src="../Downloads/WhatsApp Image 2025-04-03 at 12.24.32 PM (1).jpeg" /> <img src="../Downloads/WhatsApp Image 2025-04-03 at 12.24.32 PM (2).jpeg"
+    
+    <section id="contacto" aria-label="Información de contacto">
+      <h3>Contacto</h3>
+      <p>Teléfono: 729 8321285</p>
+      <p>&nbsp; <a href="tel:+7298321285" style="color:#0D0C0C> </a></p>
+      
+      <p data_liveedit_tagid=" 0000000013e0e570>Direccion:Aun costado de la primaria en el cuarto local en San Bartolo 1seccion</a></p>
+<p>Direccion:Aun costado de la primaria en el cuarto local en San Bartolo 1seccion</p>
+    </section>
+  </main>
+  <footer>
+    Tortillas Maru
+  </footer>
+
+  <script>
+    function ordenarTortillas(event) {
+      event.preventDefault();
+      const nombre = event.target.nombre.value.trim();
+      const telefono = event.target.telefono.value.trim();
+      const producto = event.target.producto.value;
+      const cantidad = event.target.cantidad.value;
+      const comentarios = event.target.comentarios.value.trim();
+
+      if (!nombre || !telefono || !producto || !cantidad) {
+        alert('Por favor, completa todos los campos requeridos.');
+        return;
+      }
+
+      // Simulate order submission success
+      alert(
+        `Gracias por tu pedido, ${nombre}!\n` +
+        `Producto: ${producto}\n` +
+        `Cantidad: ${cantidad} paquete(s)\n` +
+        (comentarios ? `Comentarios: ${comentarios}` : '') +
+        `\nNos pondremos en contacto contigo pronto al ${telefono}.`
+      );
+
+      event.target.reset();
+    }
+  </script>
+</body>
+</html>
+
+

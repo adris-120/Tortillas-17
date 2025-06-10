@@ -1,0 +1,123 @@
+<!doctype html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Precios de Tortillas</title>
+  <style>
+    /* Modern and clean styling */
+    body {
+      background: linear-gradient(135deg, #fdf6f0, #f8d7b0);
+     
+      color: #5a3e1b;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+    main {
+      background: #fff8f0;
+      margin: 40px 20px;
+      max-width: 480px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(113, 78, 30, 0.25);
+      padding: 30px;
+    }
+    h1 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2.4rem;
+      margin-bottom: 24px;
+      color: #a15300;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 8px;
+    }
+    thead tr {
+      background-color: #dfa951;
+      color: #fff;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      border-radius: 8px;
+    }
+    thead th {
+      padding: 12px 16px;
+    }
+    tbody tr {
+      background-color: #fff3db;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+      cursor: default;
+    }
+    tbody tr:hover {
+      background-color: #f0c270;
+    }
+    tbody td {
+      padding: 14px 16px;
+      font-size: 1.1rem;
+      color: #6c4b00;
+      text-align: center;
+    }
+    tbody td:first-child {
+      text-align: left;
+      font-weight: 600;
+    }
+    @media (max-width: 480px) {
+      main {
+        margin: 20px 12px;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      tbody td {
+        font-size: 1rem;
+        padding: 10px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Precios de Tortillas</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>Precio por kg </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tortilla de Maíz</td>
+          <td>$25.00</td>
+        </tr>
+        <tr>
+          <td>Tortilla de Harina</td>
+          <td>$25.00</td>
+        </tr>
+        <tr>
+          <td>Tortilla de Trigol</td>
+          <td>$25.00</td>
+        </tr>
+        <tr>
+          <td>Tortilla Azul</td>
+          <td>$27.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
+
+
